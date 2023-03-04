@@ -1,61 +1,29 @@
-# Job Portal
-Django Job Portal.       
-,,
+Job Portal - Read Me
+This is a Django-based job portal project. The following are the instructions to download, install, and run the project.
+
+This is a Django-based Job Portal application that allows employers to post job openings and job seekers to search and apply for jobs.
 
 Installation
-To download the project, you can either:
+To install the Job Portal application, follow the steps below:
 
-Use the terminal and type the following command: https://github.com/Sany07/Job-Portal.git
-Download it manually from this URL: https://github.com/Sany07/Job-Portal.git
-After downloading, install the dependencies by running the following command in the terminal:
+Clone the repository using the command: https://github.com/Sany07/Job-Portal.git. Alternatively, you can download the application using the URL: https://github.com/Sany07/Job-Portal.git.
 
-#bash
+Install dependencies using the command sudo apt install libpq-dev. This is an important software that is required for the application to run.
 
-sudo apt install libpq-dev
-virtualenv env ( # Activate Virtual Enviroment)
-pip install django
-pip install -r requirements.txt
+Create a virtual environment using the command virtualenv env.
 
-Note: If any requirements fail to install from the requirements.txt file, you can install them manually, such as pip install django-ckeditor.
+Install required modules using the command pip install -r requirements.txt. In case there are failed installations listed in the requirements.txt file, you can install them manually using the command pip install <module-name>.
 
-#Database
-You can set up the database from settings.py file.
+Set up the database from the settings.py file.
 
-#Migrate the Database
-To migrate the database, open the terminal in the project directory and run the following commands:
+Migrate the database using the commands python manage.py makemigrations and python manage.py migrate.
 
-#Copy code
-python manage.py makemigrations
-python manage.py migrate
-Collect Static Files
-To collect all the static files in your apps, run the following command in the terminal:
+Collect all static files in your apps using the command python manage.py collectstatic.
 
-#Copy code
-python manage.py collectstatic
-Run the Server
-To run the server, use the following command:
-
-#Copy code
-python manage.py runserver
+Finally, run the server using the command python manage.py runserver.
+  
 Screenshots
-The following are the screenshots of the project:
-
-Home Page:
-Home Page Screenshot
-
-Jobs Page:
-Jobs Page Screenshot
-
-Job Detail Page:
-Job Detail Page Screenshot
-
-Create Job Page:
-Create Job Page Screenshot
-
-Dashboard Page:
-Dashboard Page Screenshot
-
-Employer Job Applicants Page:
-Employer Job Applicants Page Screenshot
-
-Thank you for using this job portal project.,,
+Screenshots of the application can be found in the screenshots folder in the repository.
+  
+Thank You
+Thank you for using the Job Portal application.

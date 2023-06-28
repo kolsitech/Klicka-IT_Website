@@ -17,6 +17,11 @@ from jobapp.models import *
 from jobapp.permission import *
 User = get_user_model()
 
+def new_content(request):
+    return render(request, 'jobapp/newcontent.html',)
+
+def new_contact(request):
+    return render(request, 'jobapp/contact.html',)
 
 def home_view(request):
     published_jobs = Job.objects.filter(is_published=True).order_by('-timestamp')

@@ -14,9 +14,34 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #717ff5;
   overflow-x: hidden;
+  background-color: #fbf6f6;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  position: relative;
 }
+
+body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+body.offcanvas-menu {
+    position: relative; }
+body.offcanvas-menu:after {
+      opacity: 1;
+      visibility: visible; }
 
 a {
   color: #4154f1;
@@ -24,7 +49,7 @@ a {
 }
 
 a:hover {
-  color: #717ff5;
+  color: #444444;
   text-decoration: none;
 }
 
@@ -605,6 +630,7 @@ section {
 
 .values .box img {
   padding: 30px 50px;
+  border-radius: 10px;
   transition: 0.5s;
   transform: scale(1.1);
 }
@@ -2405,4 +2431,5 @@ section {
   text-align: center;
   font-size: 13px;
   color: #012970;
-}
+}
+

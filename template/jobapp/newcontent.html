@@ -1,0 +1,438 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<!-- ======= About Section ======= -->
+
+<!-- HOME -->
+<section class="home-section section-hero overlay bg-image"
+  style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
+
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-12">
+        <div class="mb-5 text-center">
+          <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
+          <p>Discover the path to your dream job with effortless ease by following our simple and proven approach - the ultimate solution for achieving your career aspirations!</p>
+        </div>
+        <form method="GET" action="{% url 'jobapp:search_result' %}" class="search-jobs-form">
+          {% include 'jobapp/search.html' %}
+        </form>
+      </div>
+    </div>
+  </div>
+  <a href="#next" class="scroll-button smoothscroll">
+    <span class=" icon-keyboard_arrow_down"></span>
+  </a>
+
+</section>
+
+<section id="about" class="about">
+
+    <div class="container" data-aos="fade-up">
+      <div class="row gx-0">
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="content">
+            <h3>Who We Are</h3>
+            <h2>Klicka is a recruitment company that helps match job seekers with the right job opportunities across different industries.</h2>
+            <p>
+              Klicka is a dedicated and professional recruitment company that is committed to helping job seekers find the right career opportunities. With a wide range of services and a focus on providing excellent service, Klicka is a valuable resource for anyone looking to advance their career. Whether you are in IT, finance, healthcare, or any other industry, let Klicka help you find the right opportunity to take your career to the next level.
+            </p>
+            <div class="text-center text-lg-start">
+              <a href="#features" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'assets_portal/img/about.jpg' %}" class="img-fluid" alt="">
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- End About Section -->
+
+  <!-- ======= Values Section ======= -->
+  <section id="values" class="values">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Our Values</h2>
+        <p>Klicka values providing an exceptional service to both clients and candidates.</p>
+      </header>
+
+      <div class="row">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="box">
+            <img src="{% static 'assets_portal/img/values-1.png' %}" class="img-fluid" alt="">
+            <h3>Our Belief</h3>
+            <p>We believe in building long-term relationships with their clients and candidates and in understanding their needs and requirements to provide the best match.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+          <div class="box">
+            <img src="{% static 'assets_portal/img/values-2.png' %}" class="img-fluid" alt="">
+            <h3>Compatibility</h3>
+            <p>We pride ourselves in our ability to match the right candidate to the right job, and to provide excellent service to both clients and candidates alike.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+          <div class="box">
+            <img src="{% static 'assets_portal/img/values-3.png' %}" class="img-fluid" alt="">
+            <h3>Aspects.</h3>
+            <p>Klicka values integrity, professionalism, and accountability in all aspects of their business. They strive to be transparent and honest in their dealings with clients and candidates and to always act in the best interests of all parties involved. </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- End Values Section -->
+
+  <!-- ======= Counts Section ======= -->
+  <section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-emoji-smile"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-headset" style="color: #15be56;"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-people" style="color: #bb0852;"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+  <!-- ======= Features Section ======= -->
+  <section id="features" class="features">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Features</h2>
+        <p>Klicka IT, is a recruitment company that provides a wide range of features to clients and candidates alike. Some of these features include:</p>
+      </header>
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <img src="{% static 'assets_portal/img/features.png' %}" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+          <div class="row align-self-center gy-4">
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Specialization in IT recruitment</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Wide range of services</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Matching the right candidate to the right job</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Excellent service</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Long-term relationships</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Integrity, professionalism, and accountability</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div> <!-- / row -->
+
+      <!-- Feature Tabs -->
+      <div class="row feture-tabs" data-aos="fade-up">
+        <div class="col-lg-6">
+          <h3>KlickaRecruitmentAgency</h3>
+
+          <!-- Tabs -->
+          <ul class="nav nav-pills mb-3">
+            <li>
+              <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Speed</a>
+            </li>
+            <li>
+              <a class="nav-link" data-bs-toggle="pill" href="#tab2">Consistency</a>
+            </li>
+            <li>
+              <a class="nav-link" data-bs-toggle="pill" href="#tab3">Tailored solutions</a>
+            </li>
+          </ul><!-- End Tabs -->
+
+          <!-- Tab Content -->
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active" id="tab1">
+              <p></p>
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Quick turnaround times</h4>
+              </div>
+              <p>Klicka IT is known for providing quick turnaround times for both clients and candidates. They understand the importance of filling job openings quickly, and strive to find suitable candidates as soon as possible. They use modern recruitment tools and methods to make the process more efficient, and provide a smooth and fast service.</p>
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Flexibility</h4>
+              </div>
+              <p>Klicka IT is flexible and can adapt quickly to clients' needs and requirements. They offer a variety of recruitment solutions, including permanent placement, contract staffing, and executive search, which allows them to provide a speed of service that fits the client's specific need. They are able to provide candidates that match the clients' requirements and timeline, making the process more efficient.</p>
+            </div><!-- End Tab 1 Content -->
+
+            <div class="tab-pane fade show" id="tab2">
+              <p></p>
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Consistent high-quality service</h4>
+              </div>
+              <p>Klicka IT is committed to providing consistent high-quality service to all of its clients and candidates. They strive to understand the unique needs of each client and candidate, and work to match the right person to the right job. They use a thorough screening process, and conduct background and reference checks to ensure that the candidates they present to clients are of the highest caliber.</p>
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Proven track record</h4>
+              </div>
+              <p>Klicka IT has a proven track record of providing consistent and reliable service to clients and candidates. They have a team of experienced recruiters who are well-versed in the latest recruitment trends and techniques. This ensures that they are able to provide consistent service to clients, no matter what their industry or the specific requirements of their job openings may be. They are able to maintain a high level of service quality by providing the best match for the clients and candidates.</p>
+            </div><!-- End Tab 2 Content -->
+
+            <div class="tab-pane fade show" id="tab3">
+              <p></p>
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Tailored solutions</h4>
+              </div>
+              <p>Klicka IT offers tailored solutions for clients and candidates that meet their specific needs and requirements. They understand that every client and candidate is unique, and work to provide customized solutions that are tailored to their specific needs. They take the time to understand the unique needs of each client, and provide a service that matches the client's specific requirements, making the service top of the line.</p>
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Expertise and experience</h4>
+              </div>
+              <p>Klicka IT is made up of a team of experienced and knowledgeable recruiters who are experts in the field of IT recruitment. They have a deep understanding of the IT industry and the specific needs of IT professionals. This expertise and experience allows them to provide top of the line service to clients and candidates, and to match the right person to the right job. They are able to provide the most suitable candidates for the clients, and the best job opportunities for the candidates.</p>
+            </div><!-- End Tab 3 Content -->
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+          <img src="{% static 'assets_portal/img/features-2.png' %}" class="img-fluid" alt="">
+        </div>
+
+      </div><!-- End Feature Tabs -->
+
+      <!-- Feature Icons -->
+      <div class="row feature-icons" data-aos="fade-up">
+        <h3>Get in Touch with us today and recieve the service of your dreams</h3>
+
+        <div class="row">
+
+          <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="{% static 'assets_portal/img/features-3.png' %}" class="img-fluid p-4" alt="">
+          </div>
+
+          <div class="col-xl-8 d-flex content">
+            <div class="row align-self-center gy-4">
+
+              <div class="col-md-6 icon-box" data-aos="fade-up">
+                <i class="ri-line-chart-line"></i>
+                <div>
+                  <h4>Specialization in IT recruitment</h4>
+                  <p>Klicka IT specializes in placing IT professionals in various industries, providing clients and candidates with a deep understanding and expertise of the IT field.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <i class="ri-stack-line"></i>
+                <div>
+                  <h4>Wide range of services</h4>
+                  <p>Klicka IT provides a wide range of services including sourcing and screening candidates, conducting interviews, and salary negotiations, making the hiring process more efficient for clients.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                <i class="ri-brush-4-line"></i>
+                <div>
+                  <h4>Diversity, equity, and inclusion</h4>
+                  <p>Klicka IT values diversity, equity, and inclusion and strive to create an inclusive environment for all, believing that a diverse workforce leads to better decision making, more innovation, and greater success for both the company and its employees.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                <i class="ri-magic-line"></i>
+                <div>
+                  <h4>Long-term relationships</h4>
+                  <p>Klicka IT values building long-term relationships with clients and candidates, and they strive to understand their needs and requirements to provide the best match.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                <i class="ri-command-line"></i>
+                <div>
+                  <h4>Matching the right candidate to the right job</h4>
+                  <p>Klicka IT prides itself on its ability to match the right candidate to the right job, ensuring that clients and candidates are satisfied with the final outcome.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                <i class="ri-radar-line"></i>
+                <div>
+                  <h4>Integrity, professionalism, and accountability</h4>
+                  <p>Klicka IT values integrity, professionalism, and accountability in all aspects of their business, ensuring that clients and candidates can trust the company to act in their best interests.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- End Feature Icons -->
+
+    </div>
+
+  </section><!-- End Features Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Services</h2>
+        <p>We offer a wide range of services some of which are listed below</p>
+      </header>
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-box blue">
+            <i class="ri-discuss-line icon"></i>
+            <h3>Candidate Sourcing and Screening</h3>
+            <p>Klicka IT will search for and identify potential candidates that match the specific requirements of the job opening, and will screen them to ensure they are a good fit for the job.</p>
+            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-box orange">
+            <i class="ri-discuss-line icon"></i>
+            <h3>Interviews</h3>
+            <p>Klicka IT will conduct initial interviews with potential candidates, helping to narrow down the pool of applicants.</p>
+            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-box green">
+            <i class="ri-discuss-line icon"></i>
+            <h3>Background and Reference checks</h3>
+            <p>Klicka IT will conduct background and reference checks on potential candidates to ensure they are a good fit for the job.</p>
+            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-box red">
+            <i class="ri-discuss-line icon"></i>
+            <h3>Salary Negotiations</h3>
+            <p>Klicka IT will assist with salary negotiations between the client and the candidate to ensure both parties are satisfied with the compensation package.</p>
+            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-box purple">
+            <i class="ri-discuss-line icon"></i>
+            <h3>Onboarding and Orientation</h3>
+            <p>Klicka IT will help new hires with the onboarding process and provide orientation to ensure they have a smooth transition into the new job.</p>
+            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="service-box pink">
+            <i class="ri-discuss-line icon"></i>
+            <h3>Benefits and Compensation Consulting</h3>
+            <p> Klicka IT will provide consulting services to clients on benefits and compensation packages to ensure they are competitive and attractive to potential candidates.</p>
+            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- End Services Section -->
+   
+  {% endblock %}

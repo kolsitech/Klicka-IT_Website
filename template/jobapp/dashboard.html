@@ -11,7 +11,7 @@
                 <h1 class="text-white font-weight-bold">Dashboard</h1>
                 <div class="custom-breadcrumbs">
                     <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
-                    <a href="{% url 'jobapp:job-list' %}">Job</a> <span class="mx-2 slash">/</span>
+                    <a href="{% url 'jobapp:job-list' %}">Jobs</a> <span class="mx-2 slash">/</span>
                     <span class="text-white"><strong>Dashboard</strong></span>
                 </div>
             </div>
@@ -27,7 +27,7 @@
 
                 <div class="card">
                     {% if user.role == "employer" %}
-                    <h5 class="card-header text-center">My All Job</h5>
+                    <h5 class="card-header text-center">All of My Jobs</h5>
                     {% if jobs %}
                     <table class="table text-center mt-5">
                         <thead class="thead-dark">
@@ -106,17 +106,17 @@
                         </tbody>
                     </table>
                     {% else %}
-                    <p class="m-5">You have not any job yet !! <a href="{% url 'jobapp:create-job' %}">Create a new one.</a></p>
+                    <p class="m-5">You do not have any jobs yet !! <a href="{% url 'jobapp:create-job' %}">Create a new one.</a></p>
                     {% endif %}
                     {% elif user.role == "employee" %}
 
 
                     <ul class="mb-3 nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Bookmarked Job</a>
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Bookmarked Jobs</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Aplied Job</a>
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Applied Jobs</a>
                         </li>
                       </ul>
                       <div class="tab-content" id="myTabContent">
@@ -146,18 +146,18 @@
                                 </tbody>
                             </table>
                             {% else %}
-                            <p class="m-5">You have not any save job yet !! </p>
+                            <p class="m-5">You do not any saved jobs yet !! </p>
                             {% endif %}
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <h5 class="card-header text-center">Aplied Posts</h5>
+                            <h5 class="card-header text-center">Applied Posts</h5>
                             {% if appliedjobs %}
                             <table class="table text-center mt-5">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th>Job Title</th>
                                         <th>Posted Date</th>
-                                        <th>Date expiring</th>
+                                        <th>Date Of Expiary</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -171,7 +171,7 @@
                                 </tbody>
                             </table>
                             {% else %}
-                            <p class="m-5">You have not any applied job yet !! </p>
+                            <p class="m-5">You have not applied for any jobs yet !! </p>
                             {% endif %}
                         </div>
                         

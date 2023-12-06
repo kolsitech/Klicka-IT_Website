@@ -7,26 +7,19 @@
 <!-- ======= About Section ======= -->
 
 <!-- HOME -->
-<section class="home-section section-hero overlay bg-image"
-  style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
-
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/hero_1.jpg' %}');"
+  id="home-section">
   <div class="container">
-    <div class="row align-items-center justify-content-center">
-      <div class="col-md-12">
-        <div class="mb-5 text-center">
-          <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
-          <p>Discover the path to your dream job with effortless ease by following our simple and proven approach - the ultimate solution for achieving your career aspirations!</p>
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="text-white font-weight-bold">About</h1>
+        <div class="custom-breadcrumbs">
+          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
+          <span class="text-white"><strong>About</strong></span>
         </div>
-        <form method="GET" action="{% url 'jobapp:search_result' %}" class="search-jobs-form">
-          {% include 'jobapp/search.html' %}
-        </form>
       </div>
     </div>
   </div>
-  <a href="#next" class="scroll-button smoothscroll">
-    <span class=" icon-keyboard_arrow_down"></span>
-  </a>
-
 </section>
 
 <section id="about" class="about">

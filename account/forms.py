@@ -148,6 +148,11 @@ class UserLoginForm(forms.Form):
 
 
 class EmployeeProfileEditForm(forms.ModelForm):
+    phone_number = forms.CharField(max_length=15, label='Phone Number', required=True)
+    address = forms.CharField(max_length=255, label='Address', required=True)
+    city = forms.CharField(max_length=20, label='City', required=True)
+    id_number = forms.CharField(max_length=20, label='ID Number', required=True)
+
 
     def __init__(self, *args, **kwargs):
         super(EmployeeProfileEditForm, self).__init__(*args, **kwargs)
@@ -161,7 +166,27 @@ class EmployeeProfileEditForm(forms.ModelForm):
                 'placeholder': 'Enter Last Name',
             }
         )
+        self.fields['phone_number'].widget.attrs.update(
+            {
+                'placeholder': 'Enter Phone Number',
+            }
+        )
+        self.fields['address'].widget.attrs.update(
+            {
+                'placeholder': 'Enter Address',
+            }
+        )
+        self.fields['id_number'].widget.attrs.update(
+            {
+                'placeholder': 'Enter ID Number',
+            }
+        )
+        self.fields['city'].widget.attrs.update(
+            {
+                'placeholder': 'City',
+            }
+        )
 
     class Meta:
         model = User
-        fields = ["first_name", "last_name", "gender"]
+        fields = ["first_name", "last_name", "phone_number", "address", "city", "id_number", "gender"]
